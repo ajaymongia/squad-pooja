@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="What the design team built in the last two weeks: Motion Kit, the App Store / Play Store Figma skill and editable Figma illustrations.">
+<meta name="description" content="What Pooja squad built in the last two weeks: Motion Kit, the App Store / Play Store Figma skill and editable Figma illustrations.">
 <meta property="og:title" content="What We Achieved in Last 2 Weeks">
 <meta property="og:description" content="Motion Kit, the App Store / Play Store Figma skill and editable Figma illustrations.">
 <meta property="og:image" content="/assets/store-screenshots.jpg">
@@ -151,13 +151,18 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
 .pages{max-height:min(78vh,820px);overflow:auto;display:grid;gap:14px;padding:16px;justify-items:center}
 .pages img{width:100%;max-width:760px;height:auto;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.12);background:#fff;display:block}
 
+/* credit line */
+.credit{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;
+  font:400 13px/1.4 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.credit b{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink)}
+
 @media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="intro">
-    <div class="eyebrow"><b>Design team</b><span>3 – 17 Nov 2026</span><span>Sprint update</span></div>
+    <div class="eyebrow"><b>Pooja squad</b><span>3 – 17 Nov 2026</span><span>Sprint update</span></div>
     <h1>What We Achieved in Last 2 Weeks</h1>
     <p class="lede">Three workflows that let designers ship faster with Claude, ChatGPT and the Figma agent. Tap a card to see the work.</p>
     <div class="tally"><span class="pill ok">2 working</span><span class="pill test">1 under testing</span></div>
@@ -172,7 +177,7 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
           <div class="top"><span class="kind">Claude skill</span><span class="pill ok">Working</span></div>
           <h3>Lottie Animation – Motion Kit</h3>
           <p>Turns any SVG illustration into a Lottie file and an animated SVG from one prompt, with a PDF tutorial.</p>
-          <div class="foot"><span class="inside"><span>Live animation</span><span>PDF guide</span></span><span class="go">Open <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+          <div class="foot"><span class="inside"><span>Video</span><span>Lottie player</span><span>PDF guide</span></span><span class="go">Open <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
         </div>
       </button>
 
@@ -193,7 +198,7 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
           <div class="top"><span class="kind">Workflow</span><span class="pill ok">Working</span></div>
           <h3>Editable Figma Illustrations with ChatGPT and Figma Agent</h3>
           <p>Plan illustration directions in ChatGPT, then have the Figma agent draw them as editable vector layers in Figma.</p>
-          <div class="foot"><span class="inside"><span>Video</span><span>Figma file</span><span>PDF guide</span></span><span class="go">Open <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+          <div class="foot"><span class="inside"><span>Illustration</span><span>Figma file</span><span>PDF guide</span></span><span class="go">Open <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
         </div>
       </button>
     </div>
@@ -210,6 +215,8 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
       <span class="pill past">Earlier</span>
     </div>
   </section>
+
+  <footer class="credit"><span>Design R &amp; D by</span> <b>Ajay Mongia</b></footer>
 </div>
 
 <!-- Motion Kit -->
@@ -221,8 +228,8 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
   <div class="d-body">
     <div class="split">
       <div class="panel">
-        <div class="panel-bar"><b>Motion Kit output</b><span>1024 × 1024 · 60 fps · 4 s loop</span></div>
-        <div class="stage big"><img src="assets/motion-kit.svg" alt="Animated robot: the cursor glides in, clicks, the robot reacts and waves, then blinks"></div>
+        <div class="panel-bar"><b>Video</b><span>1:12 · with sound</span></div>
+        <div class="vid"><video id="mk-video" controls playsinline preload="metadata" poster="assets/video-poster.jpg" src="assets/motion-kit-explainer.mp4"></video></div>
       </div>
       <div class="info">
         <p>A Claude skill that animates an SVG illustration. From one prompt it returns a Lottie file, an animated SVG and a preview page, all built from the same timings so they match frame for frame.</p>
@@ -251,8 +258,8 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
   <div class="d-body">
     <div class="split">
       <div class="panel">
-        <div class="panel-bar"><b>Video</b><span>1:12 · with sound</span></div>
-        <div class="vid"><video id="fi-video" controls playsinline preload="metadata" poster="assets/video-poster.jpg" src="assets/figma-illustrations-demo.mp4"></video></div>
+        <div class="panel-bar"><b>Illustration</b><span>Editable vector · Figma</span></div>
+        <div class="stage big"><img src="assets/robot-illustration.svg" alt="Robot peeking out of an app window with a cursor, drawn as editable vector layers in Figma"></div>
       </div>
       <div class="info">
         <p>ChatGPT handles the idea and the look and writes a design breakdown. The Figma agent draws from that breakdown as real, editable vector layers, so designers can change shapes and colours like any Figma file.</p>
@@ -265,22 +272,8 @@ dialog::backdrop{background:rgba(5,10,22,.55);backdrop-filter:blur(3px)}
         </ol>
         <div class="actions">
           <a class="btn primary" href="https://www.figma.com/design/2J19aXIi25Fa06cah5yAVe/Screenshot?node-id=52-5345&amp;t=TSNIuMicpnaAn32R-1" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h8v8M13 3 4 12"/></svg>Open Figma file</a>
-          <a class="btn" href="assets/figma-illustrations-guide.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13"/></svg>Open PDF</a>
+          <a class="btn" href="assets/figma-illustrations-guide.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13"/></svg>Step-by-step guide (PDF)</a>
         </div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-bar"><b>Step-by-step guide</b><span>Editable Figma Illustrations with ChatGPT · PDF · 9 pages</span></div>
-      <div class="pages">
-        <img src="assets/fig-guide-01.jpg" alt="Guide page 1: set up a style reference chat, generate directions as a grid" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-02.jpg" alt="Guide page 2" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-03.jpg" alt="Guide page 3" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-04.jpg" alt="Guide page 4" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-05.jpg" alt="Guide page 5" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-06.jpg" alt="Guide page 6" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-07.jpg" alt="Guide page 7" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-08.jpg" alt="Guide page 8" loading="lazy" width="1100" height="1556">
-        <img src="assets/fig-guide-09.jpg" alt="Guide page 9" loading="lazy" width="1100" height="1556">
       </div>
     </div>
   </div>
